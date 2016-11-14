@@ -1,0 +1,80 @@
+@font-face {
+	font-family: europa;
+	src: url(../fonts/light.otf);
+}
+
+@font-face {
+	font-family: pt-sans;
+	src: url(../fonts/pt_sans.ttf);
+}
+
+@font-face {
+	font-family: open-sans;
+	src: url(../fonts/open_sans.ttf);
+}
+
+@font-face {
+	font-family: europa;
+	font-weight: bold;
+	src: url(../fonts/bold.otf);
+}
+
+@font-face {
+	font-family: europa-reg;
+	src: url(../fonts/regular.otf);
+}
+
+.info {
+	font-family: europa-reg;
+	font-size: 15px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	position: relative;
+}
+
+.info .name {
+	font-family: europa;
+	font-weight: bold;
+	font-size: 25px;
+	top: 3px;
+	position: relative;
+	color: black;
+}
+
+.github {
+	margin-left: 20px;
+	top: 5px;
+	position: relative;
+}
+
+.mark {
+	width: 20px;
+	height: 20px;
+}
+
+.info div {
+	color: #959595;
+	display: inline-block;
+	margin-right: 35px;
+}
+
+.assets {
+	display: none;
+}
+
+body {
+	font-family: open-sans;
+	font-size: 14px;
+	text-align: center;
+}
+
+#timeline {
+	width: 400px;
+	height: 800px;
+}
+
+.container {
+	margin: auto;
+	width: 1024px;
+	text-align: left;
+}
