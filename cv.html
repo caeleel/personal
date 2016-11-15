@@ -16,9 +16,25 @@
 <div class="email">k.jiang@gatech.edu // (239) 777 5849 // MS in Computer Science</div>
 <div class="github"><a href="https://github.com/caeleel"><img src="img/github.png" class="mark" alt="Github"/></a></div>
 </div>
-<div class="section canvas">
-<canvas id="timeline" width=400 height=800>
-</canvas>
+<div class="section fancy-timeline">
+	<div class="slice mid twitch twitch-mid"></div>
+	<div class="slice bot twitch twitch-bot"></div>
+	<div class="slice top twitch twitch-top">
+		<div class="imgwrapper">
+		<img class="twitch-logo" src="img/twitch.svg" />
+		</div>
+	</div>
+	<div class="slice mid gatech gatech-mid"></div>
+	<div class="slice top gatech gatech-top">
+		<img class="gt-logo" src="img/gt.svg" />
+	</div>
+	<div class="slice bot gatech gatech-bot"></div>
+	<div class="slice mid um um-mid"></div>
+	<div class="slice bot um um-bot"></div>
+	<div class="slice mid ibm"></div>
+	<div class="slice mid microsoft"></div>
+	<div class="slice mid storyboard"></div>
+	<div class="slice mid nsa"></div>
 </div>
 <div class="section description">
 </div>
@@ -91,64 +107,9 @@
 </ul>
 </div>
 </div>
-<div class="assets">
-</div>
 
 <script>
 $(function() {
-	var selected = null;
-	var images = [{
-		src: "img/twitch.svg",
-		pos: [153, 101],
-		size: [94, 32]
-	},{
-		src: "img/gt.svg",
-		pos: [170, 295],
-		size: [60, 60]
-	}];
-	var shapes = [{
-		origin: [5,206],
-		path: [[170,206],[170,256],[395,256],[395,456],[300,456],[300,406],[5,406]],
-		strokeStyle: 'rgb(13, 38, 99)',
-		fillStyle: 'rgba(0, 0, 0, 0)'
-	},{
-		origin: [5,5],
-		path: [[330,5],[330,55],[395,55],[395,255],[170,255],[170,205],[5,205]],
-		strokeStyle: 'rgb(85, 37, 163)',
-		fillStyle: 'rgba(0, 0, 0, 0)'
-	}];
-
-	var canvas = document.getElementById("timeline");
-	var ctx = canvas.getContext("2d");
-	ctx.lineWidth = 1.5;
-
-	function drawImages() {
-		images.forEach(function(img) {
-			var imgElem = new Image();
-			imgElem.src = img.src;
-			imgElem.onload = function() {
-				ctx.drawImage(imgElem, img.pos[0], img.pos[1], img.size[0], img.size[1]);
-			};
-		});
-	}
-
-	function drawShapes() {
-		shapes.forEach(function(shape) {
-			ctx.strokeStyle = shape.strokeStyle;
-			ctx.fillStyle = shape.fillStyle;
-			ctx.beginPath();
-			ctx.moveTo(shape.origin[0], shape.origin[1]);
-			shape.path.forEach(function(point) {
-				ctx.lineTo(point[0], point[1]);
-			});
-			ctx.closePath();
-			ctx.fill();
-			ctx.stroke();
-		});
-	}
-
-	drawImages();
-	drawShapes();
 });
 </script>
 </body>

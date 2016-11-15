@@ -58,19 +58,136 @@
 	margin-right: 35px;
 }
 
-.assets {
-	display: none;
-}
-
 body {
 	font-family: open-sans;
 	font-size: 14px;
 	text-align: center;
 }
 
-#timeline {
+.fancy-timeline {
 	width: 400px;
 	height: 800px;
+	position: relative;
+}
+
+.slice {
+	background-color: white;
+	position: absolute;
+	height: 39px;
+}
+
+.top {
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+.mid {
+	border: 1px solid;
+}
+.bot {
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.imgwrapper {
+	width: 400px;
+	overflow: hidden;
+}
+
+.twitch {
+	background-color: #f0e5f9;
+}
+
+.twitch-logo {
+	margin-top: 40px;
+	width: 420px;
+	height: auto;
+}
+
+.gatech {
+	border-color: #103570;
+	background-color: #e5eaf9;
+	text-align: left;
+}
+
+.gt-logo {
+	margin-left: 40px;
+	width: 100px;
+	height: auto;
+}
+
+.um {
+	border-color: green;
+}
+
+.nsa {
+	border-color: blue;
+}
+
+.microsoft {
+	border-color: black;
+}
+
+.storyboard {
+	border-color: red;
+}
+
+.twitch-top {
+	width: 350px;
+}
+.twitch-mid {
+	top: 39px;
+	height: 120px;
+	width: 400px;
+}
+.twitch-bot {
+	top: 160px;
+	left: 220px;
+	width: 180px;
+}
+.gatech-top {
+	top: 161px;
+	width: 220px;
+}
+.gatech-mid {
+	top: 200px;
+	height: 120px;
+	width: 400px;
+}
+.gatech-bot {
+	top: 321px;
+	left: 300px;
+	width: 100px;
+}
+.um-mid {
+	top: 361px;
+	height: 160px;
+	width: 400px;
+}
+.um-bot {
+	top: 522px;
+	left: 300px;
+	width: 100px;
+}
+.ibm {
+	top: 401px;
+	width: 200px;
+	left: 200px;
+}
+.nsa {
+	top: 240px;
+	left: 200px;
+	width: 100px;
+}
+.microsoft {
+	top: 361px;
+	left: 200px;
+	width: 100px;
+}
+.storyboard {
+	top: 320px;
+	width: 300px;
 }
 
 .container {
