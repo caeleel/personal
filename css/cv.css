@@ -27,8 +27,8 @@
 .info {
 	font-family: europa-reg;
 	font-size: 15px;
-	margin-bottom: 30px;
-	margin-top: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	position: relative;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .github {
-	margin-left: 20px;
+	margin-left: 320px;
 	top: 5px;
 	position: relative;
 }
@@ -64,80 +64,283 @@ body {
 	text-align: center;
 }
 
+.months {
+	width: 450px;
+	margin-bottom: 10px;
+	font-size: 11px;
+	color: #aaa;
+	word-spacing: 11px;
+	margin-left: 2px;
+}
+
+.years {
+	position: absolute;
+	left: -50px;
+	top: 3px;
+	width: 50px;
+}
+
+.year {
+	font-size: 12px;
+	padding-top: 10px;
+	height: 29px;
+	width: 100px;
+	border-top: 1px dotted rgba(160, 160, 160, 0.5);
+	color: #aaa;
+}
+
+ul {
+	list-style: none;
+}
+
+ul .paper {
+	border-left: 15px solid #c0f7dd;
+}
+
+li {
+	margin-bottom: 10px;
+	margin-top: 20px;
+	border-left: 15px solid #f4f4f4;
+	padding-left: 10px;
+}
+
+.company {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.company, .time {
+	margin-left: 40px;
+}
+
+.intern {
+	background-color: #4292f4;
+}
+
+.edu {
+	background-color: #2ce08c;
+}
+
+.status {
+	font-size: 13px;
+	margin-left: 8px;
+	border-radius: 10px;
+	border: 5px solid white;
+	color: white;
+	padding: 3px 10px 3px 10px;
+	position: relative;
+	top: -3px;
+}
+
 .fancy-timeline {
 	width: 400px;
-	height: 800px;
+	height: 650px;
 	position: relative;
+}
+
+.timeline {
+	left: -100px;
+	width: 1100px;
+	position: relative;
+	overflow: hidden;
+}
+
+.calendar {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	width: 400px;
+}
+
+.d-container {
+	height: 650px;
+	overflow: hidden;
+	position: relative;
+	left: 550px;
+	top: 0;
+}
+
+.publications {
+	margin-top: 70px;
+	margin-bottom: 150px;
+}
+
+.publications .header {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.publications ul {
+	position: relative;
+	left: -40px;
+}
+
+.publications ul li {
+	border-left: 15px solid #c0f7dd;
+}
+
+.desc {
+	opacity: 0.2;
+	margin-bottom: 20px;
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.description {
+	left: 50px;
+	width: 500px;
+	height: 1700px;
+	top: 50px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	-webkit-transition: top 1s;
+	transition: top 1s;
 }
 
 .slice {
 	background-color: white;
 	position: absolute;
-	height: 39px;
+	height: 40px;
+	border-style: dashed;
 }
 
 .top {
-	border-top: 1px solid;
-	border-left: 1px solid;
-	border-right: 1px solid;
+	border-width: 1px 1px 0 1px;
 }
 .mid {
-	border: 1px solid;
+	border-width: 1px;
 }
 .bot {
-	border-right: 1px solid;
-	border-left: 1px solid;
-	border-bottom: 1px solid;
-}
-
-.imgwrapper {
-	width: 400px;
-	overflow: hidden;
+	border-width: 0 1px 1px 1px;
 }
 
 .twitch {
+	/*
 	background-color: #f0e5f9;
+	*/
+	border-color: #444;
 }
 
 .twitch-logo {
-	margin-top: 40px;
-	width: 420px;
+	margin-top: 30px;
+	width: 430px;
 	height: auto;
+	opacity: .5;
 }
 
 .gatech {
-	border-color: #103570;
-	background-color: #e5eaf9;
+	/*
+	background-color: #fff5af;
+	*/
 	text-align: left;
+	border-color: #888;
 }
 
-.gt-logo {
-	margin-left: 40px;
-	width: 100px;
+.gatech-logo {
+	opacity: .5;
+	margin-top: 80px;
+	margin-left: 62px;
+	width: 220px;
 	height: auto;
 }
 
 .um {
-	border-color: green;
+	/*
+	background-color: #ffdbaf;
+	*/
+	border-color: #bbb;
+}
+
+.u-logo {
+	position: absolute;
+	left: -14px;
+	top: 395px;
+	overflow: hidden;
+}
+
+.um-logo {
+	position: relative;
+	left: -20px;
+	height: 100px;
+	width: auto;
+	opacity: 0.5;
+}
+
+.ibm {
+	/*
+	background-color: #e0fcff;
+	*/
+	border-color: #aaa;
+}
+
+.ibm-logo {
+	height: 30px;
+	margin-top: 5px;
+	margin-left: 62px;
+	opacity: 0.5;
 }
 
 .nsa {
-	border-color: blue;
+	/*
+	background-color: #3f82ba;
+	*/
+	background-image: url(../img/nsa.svg);
+	background-position: center;
+	background-size: 200px 200px;
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+	opacity: .5;
+	border-color: #666;
 }
 
 .microsoft {
-	border-color: black;
+	/*
+	background-color: #f4f9db;
+	*/
+	border-color: #999;
+}
+
+.microsoft-logo {
+	margin-top: 2px;
+	height: 36px;
+	margin-left: 42px;
+	opacity: 0.5;
 }
 
 .storyboard {
-	border-color: red;
+	/*
+	background-color: #e8fcb0;
+	*/
+	color: #888;
+	text-align: center;
+	padding-top: 10px;
+	letter-spacing: 5px;
+	font-weight: bold;
+	height: 30px;
+	-webkit-transition: color 1s;
+	transition: color 1s;
+	border-color: #888;
 }
 
 .twitch-top {
 	width: 350px;
 }
+
+.t-logo {
+	position: absolute;
+	left: -10px;
+}
+
+.logo {
+	pointer-events: none;
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
 .twitch-mid {
-	top: 39px;
+	top: 40px;
 	height: 120px;
 	width: 400px;
 }
@@ -147,7 +350,7 @@ body {
 	width: 180px;
 }
 .gatech-top {
-	top: 161px;
+	top: 160px;
 	width: 220px;
 }
 .gatech-mid {
@@ -156,23 +359,29 @@ body {
 	width: 400px;
 }
 .gatech-bot {
-	top: 321px;
-	left: 300px;
-	width: 100px;
+	top: 320px;
+	left: 290px;
+	width: 110px;
 }
 .um-mid {
-	top: 361px;
+	top: 360px;
 	height: 160px;
 	width: 400px;
+	left: -15px;
 }
 .um-bot {
-	top: 522px;
-	left: 300px;
+	top: 520px;
+	left: 285px;
 	width: 100px;
 }
+.cover {
+	top: 520px;
+	width: 300px;
+	background-color: white;
+}
 .ibm {
-	top: 401px;
-	width: 200px;
+	top: 400px;
+	width: 220px;
 	left: 200px;
 }
 .nsa {
@@ -181,11 +390,12 @@ body {
 	width: 100px;
 }
 .microsoft {
-	top: 361px;
-	left: 200px;
-	width: 100px;
+	top: 360px;
+	left: 180px;
+	width: 120px;
 }
 .storyboard {
+	left: -20px;
 	top: 320px;
 	width: 300px;
 }
