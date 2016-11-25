@@ -30,27 +30,67 @@
 	src: url(../fonts/regular.otf);
 }
 
+.selector-container {
+	text-align: center;
+}
+
+.selector {
+	width: 300px;
+	margin: auto;
+	position: relative;
+	display: none;
+}
+
+.select {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #aaa;
+	-webkit-transition: color 1s;
+	transition: color 1s;
+}
+
+.select.selected {
+	color: black;
+}
+
+.underline {
+	position: absolute;
+	height: 1px;
+	width: 80px;
+	top: 0px;
+	left: 70px;
+	border-bottom: 1px solid #49a4ff;
+	-webkit-transition: left 0.5s;
+	transition: left 0.5s;
+}
+
 .info {
-	font-family: europa-reg;
+	font-family: open-sans;
 	font-size: 15px;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	position: relative;
 }
 
 .info .name {
-	font-family: europa;
 	font-weight: bold;
-	font-size: 25px;
+	font-family: europa;
+	font-size: 30px;
 	top: 3px;
 	position: relative;
 	color: black;
 }
 
 .github {
-	margin-left: 320px;
 	top: 5px;
 	position: relative;
+	margin-left: 10px;
 }
 
 .mark {
@@ -95,47 +135,15 @@ body {
 	color: #aaa;
 }
 
-ul {
-	list-style: none;
-}
-
-ul .paper {
-	border-left: 15px solid #c0f7dd;
-}
-
-li {
-	margin-bottom: 10px;
-	margin-top: 20px;
-	border-left: 15px solid #f4f4f4;
-	padding-left: 10px;
-}
-
 .company {
 	font-size: 20px;
 	font-weight: bold;
 }
 
-.company, .time {
-	margin-left: 40px;
-}
-
-.intern {
-	background-color: #4292f4;
-}
-
-.edu {
-	background-color: #2ce08c;
-}
-
 .status {
-	font-size: 13px;
-	margin-left: 8px;
-	border-radius: 10px;
-	border: 5px solid white;
-	color: white;
-	padding: 3px 10px 3px 10px;
-	position: relative;
-	top: -3px;
+	margin-left: 5px;
+	font-size: 18px;
+	color: #aaa;
 }
 
 .fancy-timeline {
@@ -145,26 +153,124 @@ li {
 }
 
 .timeline {
-	left: -100px;
-	width: 1100px;
+	top: 30px;
 	position: relative;
-	overflow: hidden;
+	margin: auto;
+}
+
+.timeline {
+	width: 800px;
+}
+
+.container {
+	width: 800px;
 }
 
 .calendar {
-	display: inline-block;
-	position: absolute;
-	top: 0px;
-	left: 100px;
-	width: 400px;
+	display: none;
 }
 
-.d-container {
-	height: 650px;
-	overflow: hidden;
-	position: relative;
-	left: 550px;
-	top: 0;
+@media screen and (min-width: 1100px) {
+	#selector {
+		display: block;
+	}
+
+	.visual .timeline{
+		left: -100px;
+		width: 1100px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.visual .container {
+		width: 1024px;
+	}
+
+	.visual ul {
+		list-style: none;
+	}
+
+	.visual ul .paper {
+		border-left: 15px solid #c0f7dd;
+	}
+
+	.visual li {
+		margin-bottom: 10px;
+		margin-top: 20px;
+		border-left: 15px solid #f4f4f4;
+		padding-left: 10px;
+	}
+
+	.visual .company, .visual .time {
+		margin-left: 40px;
+	}
+
+	.visual .intern {
+		background-color: #4292f4;
+	}
+
+	.visual .edu {
+		background-color: #2ce08c;
+	}
+
+	.visual .status {
+		font-size: 13px;
+		margin-left: 8px;
+		border-radius: 10px;
+		border: 5px solid white;
+		color: white;
+		padding: 3px 10px 3px 10px;
+		position: relative;
+		top: -3px;
+	}
+
+	.visual .calendar {
+		display: inline-block;
+		position: absolute;
+		top: 0px;
+		left: 100px;
+		width: 400px;
+	}
+
+	.visual .d-container {
+		height: 650px;
+		overflow: hidden;
+		position: relative;
+		left: 550px;
+		top: 0;
+	}
+
+	.visual .publications ul {
+		position: relative;
+		left: -40px;
+	}
+
+	.visual .publications ul li {
+		border-left: 15px solid #c0f7dd;
+	}
+
+	.visual .desc {
+		opacity: 0.2;
+		-webkit-transition: opacity 1s;
+		transition: opacity 1s;
+		margin-bottom: 40px;
+	}
+
+	.visual .desc.selected {
+		opacity: 1;
+	}
+
+	.visual .description {
+		left: 50px;
+		width: 500px;
+		height: 1800px;
+		top: 20px;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		-webkit-transition: top 1s;
+		transition: top 1s;
+	}
 }
 
 .publications {
@@ -176,32 +282,8 @@ li {
 	font-size: 20px;
 }
 
-.publications ul {
-	position: relative;
-	left: -40px;
-}
-
-.publications ul li {
-	border-left: 15px solid #c0f7dd;
-}
-
 .desc {
-	opacity: 0.2;
-	margin-bottom: 40px;
-	-webkit-transition: opacity 1s;
-	transition: opacity 1s;
-}
-
-.description {
-	left: 50px;
-	width: 500px;
-	height: 1800px;
-	top: 20px;
-	overflow: hidden;
-	display: inline-block;
-	position: relative;
-	-webkit-transition: top 1s;
-	transition: top 1s;
+	margin-bottom: 20px;
 }
 
 .slice {
@@ -222,9 +304,6 @@ li {
 }
 
 .twitch {
-	/*
-	background-color: #f0e5f9;
-	*/
 	border-color: #444;
 }
 
@@ -232,19 +311,14 @@ li {
 	margin-top: 30px;
 	width: 430px;
 	height: auto;
-	opacity: .5;
 }
 
 .gatech {
-	/*
-	background-color: #fff5af;
-	*/
 	text-align: left;
 	border-color: #888;
 }
 
 .gatech-logo {
-	opacity: .5;
 	margin-top: 80px;
 	margin-left: 62px;
 	width: 220px;
@@ -252,9 +326,6 @@ li {
 }
 
 .um {
-	/*
-	background-color: #ffdbaf;
-	*/
 	border-color: #bbb;
 }
 
@@ -263,6 +334,7 @@ li {
 	left: -14px;
 	top: 395px;
 	overflow: hidden;
+	pointer-events: none;
 }
 
 .um-logo {
@@ -270,13 +342,9 @@ li {
 	left: -20px;
 	height: 100px;
 	width: auto;
-	opacity: 0.5;
 }
 
 .ibm {
-	/*
-	background-color: #e0fcff;
-	*/
 	border-color: #aaa;
 }
 
@@ -284,13 +352,9 @@ li {
 	height: 30px;
 	margin-top: 5px;
 	margin-left: 62px;
-	opacity: 0.5;
 }
 
 .nsa {
-	/*
-	background-color: #3f82ba;
-	*/
 	background-image: url(../img/nsa.svg);
 	background-position: center;
 	background-size: 200px 200px;
@@ -300,10 +364,11 @@ li {
 	border-color: #666;
 }
 
+.nsa.selected {
+	opacity: 1;
+}
+
 .microsoft {
-	/*
-	background-color: #f4f9db;
-	*/
 	border-color: #999;
 }
 
@@ -315,9 +380,6 @@ li {
 }
 
 .storyboard {
-	/*
-	background-color: #e8fcb0;
-	*/
 	color: #888;
 	text-align: center;
 	padding-top: 10px;
@@ -329,6 +391,10 @@ li {
 	border-color: #888;
 }
 
+.storyboard.selected {
+	color: black;
+}
+
 .twitch-top {
 	width: 350px;
 }
@@ -336,12 +402,18 @@ li {
 .t-logo {
 	position: absolute;
 	left: -10px;
+	pointer-events: none;
 }
 
 .logo {
 	pointer-events: none;
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
+	opacity: 0.5;
+}
+
+.selected .logo{
+	opacity: 1;
 }
 
 .twitch-mid {
@@ -407,6 +479,10 @@ li {
 
 .container {
 	margin: auto;
-	width: 1024px;
 	text-align: left;
+}
+
+#info-container {
+	-webkit-transition: width 1s;
+	transition: width 1s;
 }

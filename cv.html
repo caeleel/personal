@@ -4,17 +4,27 @@
 <title>CV - Karl Jiang</title>
 <link rel="stylesheet" type="text/css" href="css/cv.css">
 <script
-  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-  crossorigin="anonymous">
+	src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+	integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+	crossorigin="anonymous">
 </script>
 </head>
 <body>
-<div class="container">
+<div id="media" class="visual">
+<div id="info-container" class="container">
 <div class="info">
 <div class="name">KARL JIANG</div>
 <div class="email">k.jiang@gatech.edu // (239) 777 5849 // MS in Computer Science</div>
 <div class="github"><a href="https://github.com/caeleel"><img src="img/github.png" class="mark" alt="Github"/></a></div>
+</div>
+</div>
+<div class="container">
+<div class="selector-container">
+<div id="selector" class="selector">
+	<div class="select select-visual selected" onclick="toVisual()">Visual</div>
+	<div class="select select-print" onclick="toPrint()">Plain</div>
+	<div class="underline"></div>
+</div>
 </div>
 <div class="section timeline">
 <div class="calendar">
@@ -41,7 +51,7 @@
 		<div class="slice mid twitch twitch-mid"></div>
 		<div class="slice bot twitch twitch-bot"></div>
 		<div class="slice top twitch twitch-top"></div>
-		<div class="t-logo logo">
+		<div class="t-logo twitch selected">
 			<img class="twitch-logo logo" src="img/twitch.svg" />
 		</div>
 		<div class="slice mid gatech gatech-mid"></div>
@@ -50,7 +60,7 @@
 		</div>
 		<div class="slice mid um um-mid"></div>
 		<div class="slice bot um um-bot"></div>
-		<div class="u-logo logo">
+		<div class="u-logo um">
 			<img class="um-logo logo" src="img/um.svg" />
 		</div>
 		<div class="slice mid ibm">
@@ -66,7 +76,7 @@
 </div>
 <div class="d-container">
 <div class="section description">
-<div class="desc d-twitch">
+<div class="desc d-twitch selected">
 	<div class="company">Twitch</div>
 	<div class="time">May 2012 - Present</div>
 	<ul>
@@ -137,7 +147,8 @@
 </div>
 </div>
 </div>
-<div class="section publications">
+<div class="section print">
+<div class="publications">
 <div class="header">Publications</div>
 <ul>
 	<li><a href="http://seec.cs.vt.edu/pubs/papers/thorsen-iccf2007-parallelsearch.pdf">Parallel Genomic Sequence-Search on a Massively Parallel System</a></li>
@@ -149,8 +160,25 @@
 </ul>
 </div>
 </div>
+</div>
+</div>
 <script>
+function toVisual() {
+	$(".underline").css('left', '70px');
+	$(".select-visual").addClass("selected");
+	$(".select-print").removeClass("selected");
+	$("#media").attr('class', 'visual');
+}
+
+function toPrint() {
+	$(".underline").css('left', '152px');
+	$(".select-print").addClass("selected");
+	$(".select-visual").removeClass("selected");
+	$("#media").attr('class', 'print');
+}
+
 $(function() {
+
 	var companies = ['twitch', 'gatech', 'nsa', 'storyboard', 'microsoft', 'ibm', 'um'];
 	var positions = ['20px', '-250px', '-640px', '-760px', '-880px', '-1100px', '-1200px'];
 	for (var i=0; i<companies.length; i++) {
@@ -159,27 +187,11 @@ $(function() {
 			for (var j=0; j<companies.length; j++) {
 				var comp = companies[j];
 				if ($(this).hasClass(comp)) {
-					$('.' + comp + '-logo').css('opacity', '1.0');
-					$('.desc').css('opacity', '0.2');
-					$('.d-' + comp).css('opacity', '1.0');
+					$('.slice, .um, .twitch').removeClass('selected')
+					$('.' + comp).addClass('selected');
+					$('.desc').removeClass('selected');
+					$('.d-' + comp).addClass('selected');
 					$('.description').css('top', positions[j]);
-					if (comp == 'storyboard') {
-						$('.storyboard').css('color', 'black');
-					} else if (comp == 'nsa') {
-						$('.nsa').css('opacity', '1.0');
-					}
-				}
-			}
-		},function() {
-			for (var j=0; j<companies.length; j++) {
-				var comp = companies[j];
-				if ($(this).hasClass(comp)) {
-					$('.' + comp + '-logo').css('opacity', '0.5');
-					if (comp == 'storyboard') {
-						$('.storyboard').css('color', '#888');
-					} else if (comp == 'nsa') {
-						$('.nsa').css('opacity', '0.5');
-					}
 				}
 			}
 		});
