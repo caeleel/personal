@@ -88,9 +88,22 @@
 }
 
 .github {
-	top: 5px;
 	position: relative;
 	margin-left: 10px;
+	top: 2px;
+}
+
+.email, .email2 {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dedede;
+}
+
+.email2 {
+	display: none;
+}
+
+.name, .github {
+	display: inline-block;
 }
 
 .mark {
@@ -100,8 +113,6 @@
 
 .info div {
 	color: #959595;
-	display: inline-block;
-	margin-right: 35px;
 }
 
 body {
@@ -170,7 +181,28 @@ body {
 	display: none;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (max-width: 800px) {
+	.container, .timeline {
+		width: 400px;
+	}
+
+	.email2 {
+		display: block;
+	}
+
+	.email {
+		display: none;
+	}
+
+	.status {
+		display: block;
+		font-size: 15px;
+		margin-left: 0;
+		margin-bottom: 3px;
+	}
+}
+
+@media screen and (min-width: 1120px) {
 	#selector {
 		display: block;
 	}
@@ -191,13 +223,13 @@ body {
 	}
 
 	.visual ul .paper {
-		border-left: 15px solid #c0f7dd;
+		border-left: 1px solid #49a4ff;
 	}
 
 	.visual li {
 		margin-bottom: 10px;
 		margin-top: 20px;
-		border-left: 15px solid #f4f4f4;
+		border-left: 1px solid #dedede;
 		padding-left: 10px;
 	}
 
@@ -246,7 +278,7 @@ body {
 	}
 
 	.visual .publications ul li {
-		border-left: 15px solid #c0f7dd;
+		border-left: 1px solid #49a4ff;
 	}
 
 	.visual .desc {
@@ -308,8 +340,9 @@ body {
 }
 
 .twitch-logo {
-	margin-top: 30px;
-	width: 430px;
+	margin-top: 55px;
+	margin-left: 40px;
+	width: 340px;
 	height: auto;
 }
 
@@ -429,6 +462,14 @@ body {
 .gatech-top {
 	top: 160px;
 	width: 220px;
+	height: 39px;
+	background-color: rgba(255,255,255, 0.8);
+	border-bottom: 1px solid white;
+	-webkit-transition: background-color 1s;
+	transition: background-color 1s;
+}
+.gatech-top.selected {
+	background-color: white;
 }
 .gatech-mid {
 	top: 200px;
@@ -475,6 +516,12 @@ body {
 	left: -20px;
 	top: 320px;
 	width: 300px;
+	background-color: rgba(255,255,255, 0.9);
+	-webkit-transition: background-color 1s;
+	transition: background-color 1s;
+}
+.storyboard.selected {
+	background-color: white;
 }
 
 .container {
