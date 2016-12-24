@@ -237,12 +237,8 @@ body {
 		margin-left: 40px;
 	}
 
-	.visual .intern {
+	.visual .intern, .visual .edu {
 		background-color: #4292f4;
-	}
-
-	.visual .edu {
-		background-color: #2ce08c;
 	}
 
 	.visual .status {

@@ -79,9 +79,10 @@
 <div class="d-container">
 <div class="section description">
 <div class="desc d-twitch selected">
-	<div class="company">Twitch</div>
+	<div class="company">Twitch <span class="status edu">Software Engineering Manager</span></div>
 	<div class="time">May 2012 - Present</div>
 	<ul>
+		<li>Started and grew team producing and maintaining all VOD features and services on Twitch</li>
 		<li>Led team to create Uploads on Twitch - Users upload user created videos to the Twitch platform, with over 50k videos uploaded in the first month.</li>
 		<li>Spun up in-house Openstack Swift cluster (open-source version of S3) to house petabytes of VOD content.</li>
 		<li>Led the initial transition of Twitch's video infrastructure from RTMP to HLS streaming video to unify our platform across web and mobile and allow 2-3x more traffic per server.</li>
@@ -116,7 +117,7 @@
 	</ul>
 </div>
 <div class="desc d-storyboard">
-	<div class="company">StoryBoard Consulting Inc., Miami, FL</div>
+	<div class="company">StoryBoard Consulting Inc., Miami, FL <span class="status edu">Associate</span></div>
 	<div class="time">Spring 2008 - Summer 2008</div>
 	<ul>
 		<li>Created entire PHP web application for processing job applications from scratch.</li>
@@ -124,7 +125,7 @@
 	</ul>
 </div>
 <div class="desc d-microsoft">
-	<div class="company">Microsoft <span class="status intern">Intern</status></div>
+	<div class="company">Microsoft <span class="status intern">SDE Intern</status></div>
 	<div class="time">Summer 2007</div>
 	<ul>
 		<li>Contributed to project on web-deployed Office (download-as-you-go).</li>
@@ -182,7 +183,7 @@ function toPrint() {
 $(function() {
 
 	var companies = ['twitch', 'gatech', 'nsa', 'storyboard', 'microsoft', 'ibm', 'um'];
-	var positions = ['20px', '-250px', '-640px', '-760px', '-880px', '-1100px', '-1200px'];
+	var positions = ['20px', '-280px', '-670px', '-790px', '-910px', '-1130px', '-1230px'];
 	for (var i=0; i<companies.length; i++) {
 		var c = companies[i];
 		$('.' + c).hover(function() {
