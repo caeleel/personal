@@ -388,16 +388,16 @@ body {
 }
 
 .nsa {
+	filter: grayscale(100%);
 	background-image: url(../img/nsa.svg);
 	background-position: center;
 	background-size: 200px 200px;
-	-webkit-transition: opacity 1s;
-	transition: opacity 1s;
 	opacity: .5;
 	border-color: #666;
 }
 
 .nsa.selected {
+	filter: grayscale(0%);
 	opacity: 1;
 }
 
@@ -440,13 +440,13 @@ body {
 
 .logo {
 	pointer-events: none;
-	-webkit-transition: opacity 1s;
-	transition: opacity 1s;
+	filter: grayscale(100%);
 	opacity: 0.5;
 }
 
 .selected .logo{
 	opacity: 1;
+	filter: grayscale(0%);
 }
 
 .twitch-mid {
